@@ -1,5 +1,8 @@
 SillyTavern 自动部署
 
+
+for example compose
+
 ```
 networks:
   lan13:
@@ -13,12 +16,15 @@ networks:
           gateway: "192.168.13.1"
 services:
   sillytavern:
-    build: https://github.com/sleechengn/sillytavern.git
+    build: 
+      context: https://github.com/sleechengn/sillytavern.git
+      dockerfile: Dockerfile
     container_name: "sillytavern"
     hostname: "sillytavern"
     restart: unless-stopped
     networks:
       lan13:
         ipv4_address: 192.168.13.6
-
 ```
+
+
