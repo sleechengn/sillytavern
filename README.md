@@ -27,4 +27,4 @@ services:
         ipv4_address: 192.168.13.6
 ```
 
-
+access port: http://you-ip:8000/
