@@ -17,5 +17,6 @@ run nodeenv --node=23.7.0 /opt/nodejs-23.7.0
 run sed -i 's,^listen:.*,listen: true,g' /opt/SillyTavern/default/config.yaml
 run sed -i "/whitelist:/a\  - 192.168.*.*" /opt/SillyTavern/default/config.yaml
 workdir /opt/SillyTavern
+volume "/opt/SillyTavern"
 run chmod +x /docker-entrypoint.sh
 entrypoint [ "/docker-entrypoint.sh" ]
